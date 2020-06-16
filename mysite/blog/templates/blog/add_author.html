@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %} {% block c %}
+<title> Add Author </title>
+
+<h3>Add new Author.</h3>
+<form class="" method="POST">
+    {{ form.as_p }} {% csrf_token %}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

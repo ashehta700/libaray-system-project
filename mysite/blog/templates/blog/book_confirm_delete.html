@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %} {% block c %}
+
+
+<h2><a href="{% url 'index' %}">Books And Authors </a>: Delete?</h2>
+
+<form method="POST">{% csrf_token %} Are you sure you want to delete "{{ object }}" ?<br/>
+    <input type="submit" value="Delete" />
+</form>
+
+
+{% endblock %}

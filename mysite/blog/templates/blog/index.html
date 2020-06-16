@@ -1,0 +1,25 @@
+ {% extends 'blog/base.html' %} {% block c %}
+<h2><a class="btn btn-primary" href="{%  url 'add_book'  %}">create new Book</a></h2><br>
+
+
+<div class="row ">
+    {% for i in text %}
+    <div class="col-4 m-auto">
+        <div class="card">
+            <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/51xr6iIorcL._SX322_BO1,204,203,200_.jpg" alt="Book {{ i.Withdrawn }}">
+            <div class="card-body">
+                <h3 class="card-title">Book Name : {{ i.headline }}</h3>
+                <p class="card-text auth">Author : {{ i.Author }}</p>
+                <p class="card-text"> {{ i.Withdrawn }}</p>
+                <p class="card-text">Published : {{ i.published_date }}</p>
+                <p class="card-text">Draft : {{ i.Draft }}</p>
+                <a href="{%  url 'book_detail'  pk=i.pk %}" class="btn btn-primary">More Details</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    {% endfor %}
+</div>
+{% endblock %}

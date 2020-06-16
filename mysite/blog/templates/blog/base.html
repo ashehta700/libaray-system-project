@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>base</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="{%  url 'index'  %}">Library System</a>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-20">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{%  url 'index'  %}">Books <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item active ">
+                        <a class="nav-link" href="{%  url 'index_auth'  %}">Authors</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-5 my-lg-2" method="GET">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" name="q">
+                    <button class="btn btn-outline-success my-2 my-sm-2" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+
+        {% block c %} {% endblock %}
+    </div>
+</body>
+
+</html>

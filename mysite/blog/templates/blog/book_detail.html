@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %} {% block c %}
+<div class="col-3">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Book Name : {{ book.headline }}</h3>
+            <h5 class="card-title">Author : {{ book.Author }}</h5>
+            <p class="card-text"> {{ book.Withdrawn }}</p>
+            <p class="card-text">Published : {{ book.published_date }}</p>
+            <p class="card-text">Draft : {{ book.Draft }}</p>
+            <a href="{% url 'book_delete' book.id %}"><button type="button" class="btn btn-outline-danger ">Delete</button></a>
+            <a href="{% url 'book_edit' book.id %}"><button type="button" class="btn btn-outline-danger ">Update</button></a>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

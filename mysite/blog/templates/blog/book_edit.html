@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %} {% block c %}
+
+
+<h2><a href="{% url 'index' %}">Books And Authors </a>: Edit</h2>
+
+<form method="POST">{% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+
+{% endblock %}

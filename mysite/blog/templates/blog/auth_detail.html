@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %} {% block c %}
+<div class="col-3">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">First Name : {{ auth.first_name }}</h5>
+            <h5 class="card-title">Last Name : {{ auth.last_name }}</h5>
+            <h5 class="card-title">Email : {{ auth.email }}</h5>
+            <a href="{% url 'auth_delete' auth.id %}"><button type="button" class="btn btn-outline-danger ">Delete</button></a>
+            <a href="{% url 'auth_edit' auth.id %}"><button type="button" class="btn btn-outline-danger ">Update</button></a>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %} {% block c %}
+<title> Add Books </title>
+
+<h3>Add new Books.</h3>
+<form class="form-group" method="post">
+    {{ form.as_p }} {% csrf_token %}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
