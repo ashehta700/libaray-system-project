@@ -27,7 +27,7 @@ Jinja2==2.11.2
 lxml==4.5.0
 MarkupSafe==1.1.1
 nmap==0.0.1
-numpy==1.18.4
+numpy==1.22.0
 ordered-set==4.0.1
 packaging==20.3
 pbr==5.4.5
